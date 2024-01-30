@@ -18,9 +18,11 @@
   <%#= f.submit %>
 <%# end %>
 
+
+<!-- Alernative au form_with qui génère un magnifique formulaire bootstrapé grâce à la gem simple_form -->
 <%= simple_form_for pet do |f| %>
     <%= f.input :name %>
-    <%= f.input :species %>
+    <%= f.input :species, collection: Pet::SPECIES %>
     <%= f.input :found_on %>
     <%= f.submit %>
 <% end %>
